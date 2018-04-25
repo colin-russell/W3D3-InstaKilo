@@ -15,6 +15,8 @@
 @property (strong, nonatomic) NSArray *foodImagesArray;
 @property (strong, nonatomic) NSArray *animalImagesArray;
 @property (strong, nonatomic) NSArray *carImagesArray;
+@property (strong, nonatomic) NSArray *zooLocationImagesArray;
+@property (strong, nonatomic) NSArray *unknownLocationImagesArray;
 
 @end
 
@@ -34,7 +36,7 @@
     self.mainLayout.itemSize = CGSizeMake(150, 150);
     self.mainLayout.minimumInteritemSpacing = 5;
     self.mainLayout.minimumLineSpacing = 5;
-    self.mainLayout.sectionInset = UIEdgeInsetsMake(0, 5, 0, 5);
+    self.mainLayout.sectionInset = UIEdgeInsetsMake(10, 20, 5, 20);
     self.mainLayout.headerReferenceSize = CGSizeMake(0, 22);
 }
 
