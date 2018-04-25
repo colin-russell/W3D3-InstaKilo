@@ -34,8 +34,22 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="145" height="141"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Yu-mC-IcL">
+                                                    <rect key="frame" x="0.0" y="-0.5" width="145" height="141"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
                                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="5Yu-mC-IcL" firstAttribute="centerX" secondItem="q5A-WC-6Kd" secondAttribute="centerX" id="0mW-cu-ljF"/>
+                                            <constraint firstItem="5Yu-mC-IcL" firstAttribute="centerY" secondItem="q5A-WC-6Kd" secondAttribute="centerY" id="Zos-uf-T9p"/>
+                                            <constraint firstItem="5Yu-mC-IcL" firstAttribute="height" secondItem="q5A-WC-6Kd" secondAttribute="height" id="mZy-D5-fAn"/>
+                                            <constraint firstItem="5Yu-mC-IcL" firstAttribute="width" secondItem="q5A-WC-6Kd" secondAttribute="width" id="pwJ-Mw-Kol"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="photoView" destination="5Yu-mC-IcL" id="1DV-UR-UGW"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoHeader" id="7UM-Fy-PQ3" userLabel="Collection Header">

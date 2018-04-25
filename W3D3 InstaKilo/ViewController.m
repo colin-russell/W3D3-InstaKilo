@@ -21,9 +21,11 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    self.collectionView.dataSource = self;
     [super viewDidLoad];
     [self setupMainLayout];
     [self setupImageArrays];
+    [self.collectionView setCollectionViewLayout:self.mainLayout];
 }
 
 - (void)setupMainLayout {
@@ -34,8 +36,8 @@
     self.mainLayout.minimumLineSpacing = 0;
     self.mainLayout.sectionInset = UIEdgeInsetsMake(0, 5, 0, 5);
     self.mainLayout.headerReferenceSize = CGSizeMake(0, 22);
-    self.mainLayout.footerReferenceSize = CGSizeMake(0, 15);
-    [self.collectionView setCollectionViewLayout:self.mainLayout];
+    
+    
 }
 
 - (void)setupImageArrays {
@@ -53,7 +55,7 @@
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    if (section == 1 | section == 3) {
+    if (section == 0 || section == 2) {
         return 3;
     } else {
         return 5;
@@ -62,23 +64,13 @@
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCell" forIndexPath:indexPath];
+
+//    cell.photoView.translatesAutoresizingMaskIntoConstraints = NO;
+//    cell.photoView.contentMode = UIViewContentModeScaleAspectFit;
     
-    // photoView constraints
-    cell.photoView.translatesAutoresizingMaskIntoConstraints = NO;
-    cell.photoView.contentMode = UIViewContentModeScaleAspectFit;
-    [NSLayoutConstraint activateConstraints:
-     @[
-       [cell.photoView.heightAnchor constraintEqualToAnchor:cell.heightAnchor],
-       [cell.photoView.widthAnchor constraintEqualToAnchor:cell.widthAnchor],
-       [cell.photoView.topAnchor constraintEqualToAnchor:cell.topAnchor],
-       [cell.photoView.bottomAnchor constraintEqualToAnchor:cell.bottomAnchor],
-       [cell.photoView.leadingAnchor constraintEqualToAnchor:cell.leadingAnchor],
-       [cell.photoView.trailingAnchor constraintEqualToAnchor:cell.trailingAnchor]
-       ]
-     ];
-    if (indexPath.section == 1){
+    if (indexPath.section == 0){
         cell.photoView.image = [self.foodImagesArray objectAtIndex:indexPath.item];
-    } else if (indexPath.section == 2){
+    } else if (indexPath.section == 1){
         cell.photoView.image = [self.animalImagesArray objectAtIndex:indexPath.item];
     } else {
         cell.photoView.image = [self.carImagesArray objectAtIndex:indexPath.item];
@@ -88,10 +80,13 @@
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
-    UICollectionReusableView* header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"PhotoHeader"                                                                                     forIndexPath:indexPath];
-    UILabel *label = [header viewWithTag:1];
-    label.text = [NSString stringWithFormat:@"Section %ld!", indexPath.section];
-    return header;
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
+        UICollectionReusableView* header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"PhotoHeader"                                                                                     forIndexPath:indexPath];
+        UILabel *label = [header viewWithTag:1];
+        label.text = [NSString stringWithFormat:@"Section %ld!", indexPath.section];
+        return header;
+    }
+    return nil;
 }
 
 @end
