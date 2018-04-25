@@ -35,6 +35,7 @@
     self.mainLayout.sectionInset = UIEdgeInsetsMake(0, 5, 0, 5);
     self.mainLayout.headerReferenceSize = CGSizeMake(0, 22);
     self.mainLayout.footerReferenceSize = CGSizeMake(0, 15);
+    [self.collectionView setCollectionViewLayout:self.mainLayout];
 }
 
 - (void)setupImageArrays {
@@ -62,7 +63,7 @@
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCell" forIndexPath:indexPath];
     
-    // cell constraints
+    // photoView constraints
     cell.photoView.translatesAutoresizingMaskIntoConstraints = NO;
     cell.photoView.contentMode = UIViewContentModeScaleAspectFit;
     [NSLayoutConstraint activateConstraints:
@@ -75,14 +76,21 @@
        [cell.photoView.trailingAnchor constraintEqualToAnchor:cell.trailingAnchor]
        ]
      ];
+    if (indexPath.section == 1){
+        cell.photoView.image = [self.foodImagesArray objectAtIndex:indexPath.item];
+    } else if (indexPath.section == 2){
+        cell.photoView.image = [self.animalImagesArray objectAtIndex:indexPath.item];
+    } else {
+        cell.photoView.image = [self.carImagesArray objectAtIndex:indexPath.item];
+    }
     
     return cell;
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
-    UICollectionReusableView* header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"Photo Header"                                                                                     forIndexPath:indexPath];
+    UICollectionReusableView* header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"PhotoHeader"                                                                                     forIndexPath:indexPath];
     UILabel *label = [header viewWithTag:1];
-    label.text = [NSString stringWithFormat:@"Welcome to section %ld!", indexPath.section];
+    label.text = [NSString stringWithFormat:@"Section %ld!", indexPath.section];
     return header;
 }
 
