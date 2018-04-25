@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Mmy-v5-ykQ">
-                                <rect key="frame" x="0.0" y="30" width="375" height="607"/>
+                                <rect key="frame" x="0.0" y="61" width="375" height="576"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EV1-8E-ldA">
                                     <size key="itemSize" width="145" height="141"/>
@@ -36,7 +36,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Yu-mC-IcL">
-                                                    <rect key="frame" x="0.0" y="-0.5" width="145" height="141"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="145" height="141"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -69,13 +69,25 @@
                                     </constraints>
                                 </collectionReusableView>
                             </collectionView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8br-31-tDg">
+                                <rect key="frame" x="120.5" y="25" width="133" height="29"/>
+                                <segments>
+                                    <segment title="Subject"/>
+                                    <segment title="Location"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="hEz-ll-cKf"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Mmy-v5-ykQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="22g-fV-ZFj"/>
+                            <constraint firstItem="Mmy-v5-ykQ" firstAttribute="top" secondItem="8br-31-tDg" secondAttribute="bottom" constant="8" id="F5d-dv-sHa"/>
+                            <constraint firstItem="8br-31-tDg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GNh-Pi-3rg"/>
                             <constraint firstItem="Mmy-v5-ykQ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="UdB-nz-Jqn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mmy-v5-ykQ" secondAttribute="bottom" constant="30" id="xPg-R1-lri"/>
-                            <constraint firstItem="Mmy-v5-ykQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="zx6-Mi-uPl"/>
+                            <constraint firstItem="8br-31-tDg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="z2k-bj-NVx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

@@ -12,17 +12,20 @@
 @interface ViewController () <UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) UICollectionViewFlowLayout *mainLayout;
+@property (nonatomic) BOOL orderByLocation;
 @property (strong, nonatomic) NSArray *foodImagesArray;
 @property (strong, nonatomic) NSArray *animalImagesArray;
 @property (strong, nonatomic) NSArray *carImagesArray;
 @property (strong, nonatomic) NSArray *zooLocationImagesArray;
 @property (strong, nonatomic) NSArray *unknownLocationImagesArray;
+@property (strong, nonatomic) NSArray *homeLocationArray;
 
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
+    self.orderByLocation = NO;
     self.collectionView.dataSource = self;
     [super viewDidLoad];
     [self setupMainLayout];
@@ -41,9 +44,13 @@
 }
 
 - (void)setupImageArrays {
+    // subjects
     self.foodImagesArray = @[[UIImage imageNamed:@"IMG_0124.JPG"], [UIImage imageNamed:@"IMG_0478.JPG"], [UIImage imageNamed:@"IMG_1724.JPG"]];
     self.animalImagesArray = @[[UIImage imageNamed:@"IMG_0217.jpg"], [UIImage imageNamed:@"IMG_0251.jpg"], [UIImage imageNamed:@"IMG_0255.jpg"], [UIImage imageNamed:@"IMG_0262.jpg"], [UIImage imageNamed:@"IMG_0292.jpg"]];
     self.carImagesArray = @[[UIImage imageNamed:@"592f4169b74af41b008b5977-750-563.jpg"], [UIImage imageNamed:@"images.jpeg"], [UIImage imageNamed:@"LamborghiniRoadsterTA.jpg"]];
+    
+    //locations
+    
 }
 
 
@@ -51,7 +58,11 @@
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 3;
+    if (self.orderByLocation == NO){
+        return 3;
+    } else {
+        return 4;
+    }
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -82,17 +93,28 @@
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         UICollectionReusableView* header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"PhotoHeader"                                                                                     forIndexPath:indexPath];
         UILabel *label = [header viewWithTag:1];
-        if (indexPath.section == 0){
-            label.text = @"Food";
-        } else if (indexPath.section == 1){
-            label.text = @"Animals";
-        } else {
-            label.text = @"Cars";
-        }
         
+        if (self.orderByLocation == NO) {
+            if (indexPath.section == 0){
+                label.text = @"Food";
+            } else if (indexPath.section == 1){
+                label.text = @"Animals";
+            } else {
+                label.text = @"Cars";
+            }
+        } else {
+            
+        }
         return header;
     }
     return nil;
 }
+
+#pragma mark - Actions
+
+- (IBAction)segmentedControl:(UISegmentedControl *)sender {
+    
+}
+
 
 @end
