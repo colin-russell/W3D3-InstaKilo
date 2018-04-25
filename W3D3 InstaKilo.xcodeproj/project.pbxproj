@@ -13,6 +13,18 @@
 		3B57057B2090E589000BEA57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B57057A2090E589000BEA57 /* Assets.xcassets */; };
 		3B57057E2090E589000BEA57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B57057C2090E589000BEA57 /* LaunchScreen.storyboard */; };
 		3B5705812090E589000BEA57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5705802090E589000BEA57 /* main.m */; };
+		3B57059E2090E7B9000BEA57 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B57059D2090E7B9000BEA57 /* PhotoCollectionViewCell.m */; };
+		3B5705AE2090EB5A000BEA57 /* IMG_0255.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B5705A42090EB59000BEA57 /* IMG_0255.jpg */; };
+		3B5705AF2090EB5A000BEA57 /* IMG_0262.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B5705A52090EB59000BEA57 /* IMG_0262.jpg */; };
+		3B5705B12090EB5A000BEA57 /* IMG_0292.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B5705A72090EB59000BEA57 /* IMG_0292.jpg */; };
+		3B5705B42090EB5A000BEA57 /* IMG_0217.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B5705AA2090EB59000BEA57 /* IMG_0217.jpg */; };
+		3B5705B62090EB5A000BEA57 /* IMG_0251.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B5705AC2090EB59000BEA57 /* IMG_0251.jpg */; };
+		3B5705BD2090EE31000BEA57 /* IMG_0478.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3B5705B72090EE30000BEA57 /* IMG_0478.JPG */; };
+		3B5705BE2090EE31000BEA57 /* IMG_1724.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3B5705B82090EE30000BEA57 /* IMG_1724.JPG */; };
+		3B5705BF2090EE31000BEA57 /* LamborghiniRoadsterTA.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B5705B92090EE31000BEA57 /* LamborghiniRoadsterTA.jpg */; };
+		3B5705C02090EE31000BEA57 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B5705BA2090EE31000BEA57 /* images.jpeg */; };
+		3B5705C12090EE31000BEA57 /* 592f4169b74af41b008b5977-750-563.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B5705BB2090EE31000BEA57 /* 592f4169b74af41b008b5977-750-563.jpg */; };
+		3B5705C22090EE31000BEA57 /* IMG_0124.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3B5705BC2090EE31000BEA57 /* IMG_0124.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +38,19 @@
 		3B57057D2090E589000BEA57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B57057F2090E589000BEA57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B5705802090E589000BEA57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B57059C2090E7B9000BEA57 /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		3B57059D2090E7B9000BEA57 /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		3B5705A42090EB59000BEA57 /* IMG_0255.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_0255.jpg; path = Assets.xcassets/IMG_0255.jpg; sourceTree = "<group>"; };
+		3B5705A52090EB59000BEA57 /* IMG_0262.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_0262.jpg; path = Assets.xcassets/IMG_0262.jpg; sourceTree = "<group>"; };
+		3B5705A72090EB59000BEA57 /* IMG_0292.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_0292.jpg; path = Assets.xcassets/IMG_0292.jpg; sourceTree = "<group>"; };
+		3B5705AA2090EB59000BEA57 /* IMG_0217.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_0217.jpg; path = Assets.xcassets/IMG_0217.jpg; sourceTree = "<group>"; };
+		3B5705AC2090EB59000BEA57 /* IMG_0251.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_0251.jpg; path = Assets.xcassets/IMG_0251.jpg; sourceTree = "<group>"; };
+		3B5705B72090EE30000BEA57 /* IMG_0478.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_0478.JPG; path = Assets.xcassets/IMG_0478.JPG; sourceTree = "<group>"; };
+		3B5705B82090EE30000BEA57 /* IMG_1724.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_1724.JPG; path = Assets.xcassets/IMG_1724.JPG; sourceTree = "<group>"; };
+		3B5705B92090EE31000BEA57 /* LamborghiniRoadsterTA.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = LamborghiniRoadsterTA.jpg; path = Assets.xcassets/LamborghiniRoadsterTA.jpg; sourceTree = "<group>"; };
+		3B5705BA2090EE31000BEA57 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = images.jpeg; path = Assets.xcassets/images.jpeg; sourceTree = "<group>"; };
+		3B5705BB2090EE31000BEA57 /* 592f4169b74af41b008b5977-750-563.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "592f4169b74af41b008b5977-750-563.jpg"; path = "Assets.xcassets/592f4169b74af41b008b5977-750-563.jpg"; sourceTree = "<group>"; };
+		3B5705BC2090EE31000BEA57 /* IMG_0124.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_0124.JPG; path = Assets.xcassets/IMG_0124.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +83,70 @@
 		3B5705702090E586000BEA57 /* W3D3 InstaKilo */ = {
 			isa = PBXGroup;
 			children = (
-				3B5705712090E586000BEA57 /* AppDelegate.h */,
-				3B5705722090E586000BEA57 /* AppDelegate.m */,
+				3B5705A22090E803000BEA57 /* Supporting Files */,
+				3B5705A12090E7F7000BEA57 /* Model */,
+				3B5705A02090E7E1000BEA57 /* Controller */,
+				3B57059F2090E7CE000BEA57 /* View */,
+			);
+			path = "W3D3 InstaKilo";
+			sourceTree = "<group>";
+		};
+		3B57059F2090E7CE000BEA57 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B57057C2090E589000BEA57 /* LaunchScreen.storyboard */,
+				3B5705772090E586000BEA57 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3B5705A02090E7E1000BEA57 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				3B5705742090E586000BEA57 /* ViewController.h */,
 				3B5705752090E586000BEA57 /* ViewController.m */,
-				3B5705772090E586000BEA57 /* Main.storyboard */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3B5705A12090E7F7000BEA57 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B57059C2090E7B9000BEA57 /* PhotoCollectionViewCell.h */,
+				3B57059D2090E7B9000BEA57 /* PhotoCollectionViewCell.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3B5705A22090E803000BEA57 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B5705C32090EE36000BEA57 /* images */,
+				3B5705712090E586000BEA57 /* AppDelegate.h */,
+				3B5705722090E586000BEA57 /* AppDelegate.m */,
 				3B57057A2090E589000BEA57 /* Assets.xcassets */,
-				3B57057C2090E589000BEA57 /* LaunchScreen.storyboard */,
 				3B57057F2090E589000BEA57 /* Info.plist */,
 				3B5705802090E589000BEA57 /* main.m */,
 			);
-			path = "W3D3 InstaKilo";
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B5705C32090EE36000BEA57 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				3B5705AA2090EB59000BEA57 /* IMG_0217.jpg */,
+				3B5705AC2090EB59000BEA57 /* IMG_0251.jpg */,
+				3B5705A42090EB59000BEA57 /* IMG_0255.jpg */,
+				3B5705A52090EB59000BEA57 /* IMG_0262.jpg */,
+				3B5705A72090EB59000BEA57 /* IMG_0292.jpg */,
+				3B5705BB2090EE31000BEA57 /* 592f4169b74af41b008b5977-750-563.jpg */,
+				3B5705BA2090EE31000BEA57 /* images.jpeg */,
+				3B5705BC2090EE31000BEA57 /* IMG_0124.JPG */,
+				3B5705B72090EE30000BEA57 /* IMG_0478.JPG */,
+				3B5705B82090EE30000BEA57 /* IMG_1724.JPG */,
+				3B5705B92090EE31000BEA57 /* LamborghiniRoadsterTA.jpg */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +206,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B5705BD2090EE31000BEA57 /* IMG_0478.JPG in Resources */,
+				3B5705AF2090EB5A000BEA57 /* IMG_0262.jpg in Resources */,
+				3B5705C22090EE31000BEA57 /* IMG_0124.JPG in Resources */,
+				3B5705AE2090EB5A000BEA57 /* IMG_0255.jpg in Resources */,
+				3B5705BE2090EE31000BEA57 /* IMG_1724.JPG in Resources */,
 				3B57057E2090E589000BEA57 /* LaunchScreen.storyboard in Resources */,
+				3B5705C02090EE31000BEA57 /* images.jpeg in Resources */,
+				3B5705B62090EB5A000BEA57 /* IMG_0251.jpg in Resources */,
+				3B5705B42090EB5A000BEA57 /* IMG_0217.jpg in Resources */,
+				3B5705B12090EB5A000BEA57 /* IMG_0292.jpg in Resources */,
+				3B5705C12090EE31000BEA57 /* 592f4169b74af41b008b5977-750-563.jpg in Resources */,
 				3B57057B2090E589000BEA57 /* Assets.xcassets in Resources */,
 				3B5705792090E586000BEA57 /* Main.storyboard in Resources */,
+				3B5705BF2090EE31000BEA57 /* LamborghiniRoadsterTA.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B5705762090E586000BEA57 /* ViewController.m in Sources */,
+				3B57059E2090E7B9000BEA57 /* PhotoCollectionViewCell.m in Sources */,
 				3B5705812090E589000BEA57 /* main.m in Sources */,
 				3B5705732090E586000BEA57 /* AppDelegate.m in Sources */,
 			);
