@@ -31,13 +31,11 @@
 - (void)setupMainLayout {
     self.mainLayout = [UICollectionViewFlowLayout new];
     self.mainLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
-    self.mainLayout.itemSize = CGSizeMake(50, 50);
+    self.mainLayout.itemSize = CGSizeMake(150, 150);
     self.mainLayout.minimumInteritemSpacing = 5;
-    self.mainLayout.minimumLineSpacing = 0;
+    self.mainLayout.minimumLineSpacing = 5;
     self.mainLayout.sectionInset = UIEdgeInsetsMake(0, 5, 0, 5);
     self.mainLayout.headerReferenceSize = CGSizeMake(0, 22);
-    
-    
 }
 
 - (void)setupImageArrays {
@@ -65,8 +63,7 @@
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCell" forIndexPath:indexPath];
 
-//    cell.photoView.translatesAutoresizingMaskIntoConstraints = NO;
-//    cell.photoView.contentMode = UIViewContentModeScaleAspectFit;
+    cell.photoView.contentMode = UIViewContentModeScaleAspectFit;
     
     if (indexPath.section == 0){
         cell.photoView.image = [self.foodImagesArray objectAtIndex:indexPath.item];
@@ -83,7 +80,14 @@
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         UICollectionReusableView* header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"PhotoHeader"                                                                                     forIndexPath:indexPath];
         UILabel *label = [header viewWithTag:1];
-        label.text = [NSString stringWithFormat:@"Section %ld!", indexPath.section];
+        if (indexPath.section == 0){
+            label.text = @"Food";
+        } else if (indexPath.section == 1){
+            label.text = @"Animals";
+        } else {
+            label.text = @"Cars";
+        }
+        
         return header;
     }
     return nil;
